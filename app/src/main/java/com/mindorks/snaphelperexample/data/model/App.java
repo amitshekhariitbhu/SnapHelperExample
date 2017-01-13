@@ -6,7 +6,12 @@ package com.mindorks.snaphelperexample.data.model;
 
 public class App {
 
-    public int drawable;
     public String name;
+    public int drawable;
+
+    public App(String name, int drawable) {
+        this.name = name;
+        this.drawable = drawable;
+    }
 
 }

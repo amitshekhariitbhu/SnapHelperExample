@@ -17,8 +17,6 @@ public class MainPresenter<V extends MainMvpView> extends BasePresenter<V> imple
 
     @Override
     public void getAppList() {
-        getMvpView().showLoading();
         getMvpView().showApps(mDataManager.getAppList());
-        getMvpView().hideLoading();
     }
 }
