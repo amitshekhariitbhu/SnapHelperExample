@@ -10,6 +10,7 @@ import com.mindorks.snaphelperexample.R;
 import com.mindorks.snaphelperexample.data.model.App;
 import com.mindorks.snaphelperexample.injection.ActivityDependency;
 import com.mindorks.snaphelperexample.ui.base.BaseActivity;
+import com.mindorks.snaphelperexample.ui.common.StartSnapHelper;
 import com.mindorks.snaphelperexample.ui.main.adapter.AppListAdapter;
 
 import java.util.List;
@@ -20,10 +21,14 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivity implements MainMvpView {
 
     private MainMvpPresenter<MainMvpView> mMainMvpPresenter;
-    private AppListAdapter appListAdapter;
+    private AppListAdapter appListCenterAdapter;
+    private AppListAdapter appListStartAdapter;
 
-    @BindView(R.id.recyclerView)
-    public RecyclerView recyclerView;
+    @BindView(R.id.centerSnapRecyclerView)
+    public RecyclerView centerSnapRecyclerView;
+
+    @BindView(R.id.startSnapRecyclerView)
+    public RecyclerView startSnapRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +50,27 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
     @Override
     public void showApps(List<App> appList) {
-        appListAdapter.updateList(appList);
+        appListCenterAdapter.updateList(appList);
+        appListStartAdapter.updateList(appList);
     }
 
     private void setUpRecyclerView() {
-        LinearLayoutManager layoutManager
+
+        LinearLayoutManager layoutManagerCenter
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(layoutManager);
-        appListAdapter = new AppListAdapter(this);
-        recyclerView.setAdapter(appListAdapter);
-        SnapHelper snapHelper = new LinearSnapHelper();
-        snapHelper.attachToRecyclerView(recyclerView);
+        centerSnapRecyclerView.setLayoutManager(layoutManagerCenter);
+        appListCenterAdapter = new AppListAdapter(this);
+        centerSnapRecyclerView.setAdapter(appListCenterAdapter);
+        SnapHelper snapHelperCenter = new LinearSnapHelper();
+        snapHelperCenter.attachToRecyclerView(centerSnapRecyclerView);
+
+        LinearLayoutManager layoutManagerStart
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        startSnapRecyclerView.setLayoutManager(layoutManagerStart);
+        appListStartAdapter = new AppListAdapter(this);
+        startSnapRecyclerView.setAdapter(appListStartAdapter);
+        SnapHelper snapHelperStart = new StartSnapHelper();
+        snapHelperStart.attachToRecyclerView(startSnapRecyclerView);
+
     }
 }
