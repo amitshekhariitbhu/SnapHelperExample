@@ -9,3 +9,5 @@
 ## Start Snap
 
 <img src=https://raw.githubusercontent.com/MindorksOpenSource/SnapHelperExample/master/assets/start_snap.gif >
+
+###[Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
