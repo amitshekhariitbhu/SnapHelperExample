@@ -1,5 +1,8 @@
 # Android SnapHelper Example
 
+[![Mindorks](https://img.shields.io/badge/mindorks-opensource-blue.svg)](https://mindorks.com/open-source-projects)
+[![Mindorks Community](https://img.shields.io/badge/join-community-blue.svg)](https://mindorks.com/join-community)
+
 ### Check this [article](https://blog.mindorks.com/using-snaphelper-in-recyclerview-fc616b6833e8) for complete explanation
 
 ## Center Snap
