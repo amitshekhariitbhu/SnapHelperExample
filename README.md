@@ -1,6 +1,6 @@
 # Android SnapHelper Example
 
-## [My Personal Blog - amitshekhar.me](https://amitshekhar.me/blog) - High-quality content to learn Android concepts.
+## [Outcome School Blog](https://outcomeschool.com/blog) - High-quality content to learn Android concepts.
 
 ## Center Snap
 
@@ -17,4 +17,4 @@ You can connect with me on:
 - [GitHub](https://github.com/amitshekhariitbhu)
 - [Facebook](https://www.facebook.com/amit.shekhar.iitbhu)
 
-[**Read all of my blogs here.**](https://amitshekhar.me/blog)
+[**Read all of our blogs here.**](https://outcomeschool.com/blog)
